@@ -24,7 +24,7 @@ Icon?<br>
 
 Symbols|Details
 ---|---
-"*" | Include all the files inside <br>
-Icon? | Includes Icon, Icon1, Icon2 etc <br>
+"*" | Include all the files inside
+Icon? | Includes Icon, Icon1, Icon2 etc
 [Bb]uild | Includes both Build and Build folders
 . | is not a special character

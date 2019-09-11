@@ -2,7 +2,10 @@
 Game made on Unity
 
 ## Dev notes:
-DO NOT MAKE THESE FOLDERS:<br><br>
+
+Always include all .meta files. ALWAYS!
+
+### DO NOT MAKE THESE FOLDERS:<br><br>
 [Aa]ssets/AssetStoreTools*<br>
 [Bb]uild/<br>
 [Ll]ibrary/<br>

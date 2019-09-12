@@ -21,7 +21,7 @@ public class zoom : MonoBehaviour
 
             cam.fieldOfView = 57;
         }
-        
+        Debug.Log(triggercount);
     }
          
 }

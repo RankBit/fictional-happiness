@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class zoom : MonoBehaviour
 {
-    
-    
-    
+    private Camera cam;
+    private float zoomin;
+    int triggercount = 0;
+  
     private void OnTriggerEnter(Collider other)
     {
-        GetComponent<camerafollow>().offset = new Vector3(0f,2f,-6.5f);
+        triggercount++;
+        if (triggercount == 1)
+        {
+            cam = Camera.main;
+            cam.fieldOfView -= 30;
+        }
+        else
+        {
+
+            cam.fieldOfView = 57;
+        }
         
     }
          

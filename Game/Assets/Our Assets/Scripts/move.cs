@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class move : MonoBehaviour
 {
 
-    public float speed;
+    [SerializeField]float movespeed = 10f;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,16 @@ public class move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Input.GetAxis("Horizontal") * speed, 0f, 0f);
+        movement();
+
     }
+
+    private void movement()
+    {
+        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * movespeed;
+        var newXPos = transform.position.x + deltaX;
+        transform.position = new Vector3(newXPos, transform.position.y,transform.position.z);
+    }
+    
+   
 }

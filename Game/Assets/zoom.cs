@@ -16,6 +16,11 @@ public class zoom : MonoBehaviour
             cam = Camera.main;
             cam.fieldOfView -= 30;
         }
+        if (triggercount == 3)
+        {
+            cam = Camera.main;
+            cam.fieldOfView -= 30;
+        }
         else
         {
 

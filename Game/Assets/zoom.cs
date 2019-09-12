@@ -11,12 +11,7 @@ public class zoom : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         triggercount++;
-        if (triggercount == 1)
-        {
-            cam = Camera.main;
-            cam.fieldOfView -= 30;
-        }
-        if (triggercount == 3)
+        if (triggercount == 1 || triggercount == 3)
         {
             cam = Camera.main;
             cam.fieldOfView -= 30;

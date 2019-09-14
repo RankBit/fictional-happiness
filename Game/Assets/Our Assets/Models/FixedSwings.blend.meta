@@ -20,6 +20,9 @@ ModelImporter:
     400012: Seat1
     400014: Seat2
     2100000: No Name
+    2100002: Material.001
+    2100004: Material.002
+    2100006: Material
     2300000: Chain1
     2300002: Chain2
     2300004: Chain3

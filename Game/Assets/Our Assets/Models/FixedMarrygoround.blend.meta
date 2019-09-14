@@ -26,6 +26,9 @@ ModelImporter:
     400018: Cylinder.008
     400020: //RootNode
     2100000: No Name
+    2100002: Material
+    2100004: Material.001
+    2100006: Material.002
     2300000: Base
     2300002: Center
     2300004: Cylinder.001

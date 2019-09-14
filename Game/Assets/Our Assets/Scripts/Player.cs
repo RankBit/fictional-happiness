@@ -6,39 +6,26 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //movement
-    [SerializeField]float movespeed = 10f;
-    //removing SerializeField as it's not public by default
-
-    //public float movespeed = 10f;
+    [SerializeField]public float movespeed = 10f;
 
     //animation
     public Animator anime;
     private float inputH;
-
-    void Start()
-    {
-        
-    }
-
     void Update()
     {
         //movement
-        movement(movespeed);
+        movement();
 
         //animation
         inputH = Input.GetAxis("Horizontal");
         anime.SetFloat("inputH",inputH);
-
     }
 
     //For Smooth movement
-    public void movement(float move)
+    public void movement()
     {
-        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * move;
+        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * movespeed;
         var newXPos = transform.position.x + deltaX;
         transform.position = new Vector3(newXPos, transform.position.y,transform.position.z);
-
     }
-    
-   
 }

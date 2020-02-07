@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -815,26 +815,6 @@ MonoBehaviour:
   player: {fileID: 683801443}
   smooth: 10
   offset: {x: 0, y: 2, z: -10}
---- !u!1 &561818987 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100514, guid: 27e3c549033357241839f93f716e98b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1748773504}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &561818990
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 561818987}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300002, guid: 27e3c549033357241839f93f716e98b3, type: 3}
 --- !u!1001 &661049504
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -924,7 +904,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!114 &683801445
 MonoBehaviour:
@@ -941,8 +921,8 @@ MonoBehaviour:
   movespeed: 10
   isGrounded: 0
   anime: {fileID: 683801442}
---- !u!65 &683801446
-BoxCollider:
+--- !u!136 &683801446
+CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -951,9 +931,10 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5864628, y: 1.6739056, z: 0.2777442}
-  m_Center: {x: 0.017508477, y: 0.7794012, z: 0.017909661}
+  m_Radius: 0.4
+  m_Height: 1.7
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.85, z: 0}
 --- !u!1 &795930347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1288,7 +1269,7 @@ GameObject:
   - component: {fileID: 1236695824}
   m_Layer: 0
   m_Name: Road
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2316,26 +2297,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27e3c549033357241839f93f716e98b3, type: 3}
---- !u!1 &1851591826 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 100512, guid: 27e3c549033357241839f93f716e98b3,
-    type: 3}
-  m_PrefabInstance: {fileID: 1748773504}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &1851591829
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1851591826}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Convex: 1
-  m_CookingOptions: 14
-  m_Mesh: {fileID: 4300000, guid: 27e3c549033357241839f93f716e98b3, type: 3}
 --- !u!1 &1910667029
 GameObject:
   m_ObjectHideFlags: 0

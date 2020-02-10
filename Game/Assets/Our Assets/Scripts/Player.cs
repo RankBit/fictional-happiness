@@ -8,11 +8,11 @@ public class Player : MonoBehaviour
     //movement
     [SerializeField]public float movespeed = 10f;
     Rigidbody r;
-    public bool isGrounded;
+    public bool isGrounded = true;
 
     //animation
     public Animator anime;
-    private float inputH;
+    private float speedPercent;
 
     private void Start()
     {
@@ -24,8 +24,12 @@ public class Player : MonoBehaviour
         if (isGrounded)
         {
             movement();
-            inputH = Input.GetAxis("Horizontal");
-            anime.SetFloat("inputH", inputH);
+
+            //animation
+            speedPercent = Math.Abs(Input.GetAxis("Horizontal"));
+            anime.SetFloat("speedPercent", speedPercent);
+
+
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
@@ -33,7 +37,6 @@ public class Player : MonoBehaviour
             isGrounded = false;
             
         }
-        //animation
         
     }
 

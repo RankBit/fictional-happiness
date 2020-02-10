@@ -1,0 +1,56 @@
+#
+## Alias OBJ Material File
+# Exported from SketchUp, (c) 2000-2012 Trimble Navigation Limited
+
+newmtl Roofing_Shingles_Wood
+Ka 0.000000 0.000000 0.000000
+Kd 0.615686 0.572549 0.431373
+Ks 0.330000 0.330000 0.330000
+map_Kd House Building normal and ruined/Roofing_Shingles_Wood.jpg
+
+newmtl Granite_Light_Gray
+Ka 0.000000 0.000000 0.000000
+Kd 0.584314 0.580392 0.564706
+Ks 0.330000 0.330000 0.330000
+map_Kd House Building normal and ruined/Granite_Light_Gray.jpg
+
+newmtl buildings_buildings_0011_01_preview
+Ka 0.000000 0.000000 0.000000
+Kd 0.470588 0.462745 0.400000
+Ks 0.330000 0.330000 0.330000
+map_Kd House Building normal and ruined/buildings_buildings_0011_01_preview.jpg
+
+newmtl FrontColor
+Ka 0.000000 0.000000 0.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl TexturesCom_Shops0244_M
+Ka 0.000000 0.000000 0.000000
+Kd 0.537255 0.545098 0.513725
+Ks 0.330000 0.330000 0.330000
+map_Kd House Building normal and ruined/TexturesCom_Shops0244_M.jpg
+
+newmtl Aluminum
+Ka 0.000000 0.000000 0.000000
+Kd 0.701961 0.701961 0.701961
+Ks 0.330000 0.330000 0.330000
+map_Kd House Building normal and ruined/Aluminum.jpg
+
+newmtl seamless_metal_holes_texture_by_hhh316_d4ig9dx
+Ka 0.000000 0.000000 0.000000
+Kd 0.250980 0.266667 0.274510
+Ks 0.330000 0.330000 0.330000
+map_Kd House Building normal and ruined/seamless_metal_holes_texture_by_hhh316_d4ig9dx.jpg
+
+newmtl Color_M09
+Ka 0.000000 0.000000 0.000000
+Kd 0.000000 0.000000 0.000000
+Ks 0.330000 0.330000 0.330000
+
+newmtl Roofing_Slate_Dark
+Ka 0.000000 0.000000 0.000000
+Kd 0.388235 0.411765 0.423529
+Ks 0.330000 0.330000 0.330000
+map_Kd House Building normal and ruined/Roofing_Slate_Dark.jpg
+

@@ -31,6 +31,7 @@ public class Player : MonoBehaviour
         {
             r.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
             isGrounded = false;
+            
         }
         //animation
         

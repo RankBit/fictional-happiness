@@ -6,17 +6,20 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //movement
-    [SerializeField]public float movespeed = 2f;
+    [SerializeField] public float movespeed;
     Rigidbody r;
+    float deltaX;
     public bool isGrounded = true;
+
 
     //animation
     public Animator anime;
     private float speedPercent;
 
-    private void Start()
+    public void Start()
     {
         r = GetComponent<Rigidbody>();
+       
     }
     void Update()
     {
@@ -33,8 +36,12 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            r.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+            if(deltaX < 0)
+            r.AddForce(new Vector3(-3, 5, 0), ForceMode.Impulse);
+            if(deltaX > 0)
+            r.AddForce(new Vector3(3, 5, 0), ForceMode.Impulse);
             isGrounded = false;
+
             
         }
         
@@ -43,14 +50,22 @@ public class Player : MonoBehaviour
     //For Smooth movement
     public void movement()
     {
-        var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * movespeed;
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * movespeed;
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.rotation = new Quaternion(transform.rotation.x, 90f, transform.rotation.z, 90f);
         }
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.rotation = new Quaternion(transform.rotation.x, -90f, transform.rotation.z, 90f);
+        }
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            movespeed = 10f;
+        }
+        else
+        {
+            movespeed = 2f;
         }
         var newXPos = transform.position.x + deltaX;
         transform.position = new Vector3(newXPos, transform.position.y, transform.position.z);

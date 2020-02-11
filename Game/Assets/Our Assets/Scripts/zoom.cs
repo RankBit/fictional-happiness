@@ -17,14 +17,14 @@ public class zoom : MonoBehaviour
         c = FindObjectOfType<camerafollow>();
         c.offset = new Vector3(0f, 1f, -5f);
         play = FindObjectOfType<Player>();
-        play.movespeed = 6f;
+        
         play.movement();
     }
     private void OnTriggerExit(Collider other)
     {
         c = FindObjectOfType<camerafollow>();
         c.offset = new Vector3(0f, 2f, -10f);
-        play.movespeed = 10f;
+        
         play.movement();
     }
 }

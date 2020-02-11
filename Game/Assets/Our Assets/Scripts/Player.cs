@@ -6,7 +6,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     //movement
-    [SerializeField]public float movespeed = 10f;
+    [SerializeField]public float movespeed = 2f;
     Rigidbody r;
     public bool isGrounded = true;
 
@@ -44,8 +44,16 @@ public class Player : MonoBehaviour
     public void movement()
     {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * movespeed;
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            transform.rotation = new Quaternion(transform.rotation.x, 90f, transform.rotation.z, 90f);
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            transform.rotation = new Quaternion(transform.rotation.x, -90f, transform.rotation.z, 90f);
+        }
         var newXPos = transform.position.x + deltaX;
-        transform.position = new Vector3(newXPos, transform.position.y,transform.position.z);
+        transform.position = new Vector3(newXPos, transform.position.y, transform.position.z);
     }
     public void OnCollisionEnter(Collision collision)
     {

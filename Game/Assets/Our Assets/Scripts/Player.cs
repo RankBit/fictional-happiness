@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     Rigidbody r;
     float deltaX;
     public bool isGrounded = true;
-
+    
 
     //animation
     public Animator anime;
@@ -36,12 +36,21 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            if(deltaX < 0)
-            r.AddForce(new Vector3(-3, 5, 0), ForceMode.Impulse);
-            if(deltaX > 0)
-            r.AddForce(new Vector3(3, 5, 0), ForceMode.Impulse);
-            isGrounded = false;
+            Debug.Log(deltaX);
+            if (deltaX < 0)
+            {
+                r.AddForce(new Vector3(-3 * movespeed / 4, 5, 0), ForceMode.Impulse);
+                movespeed = 0;
+            }
 
+            if (deltaX > 0)
+            {
+                r.AddForce(new Vector3(3 * movespeed / 4, 5, 0), ForceMode.Impulse);
+                movespeed = 0;
+            }
+            else if (deltaX == 0)
+                r.AddForce(new Vector3(0, 5, 0), ForceMode.Impulse);
+            isGrounded = false;
             
         }
         
@@ -49,23 +58,37 @@ public class Player : MonoBehaviour
 
     //For Smooth movement
     public void movement()
-    {
+    { 
+        
         deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * movespeed;
-        if (Input.GetKey(KeyCode.RightArrow))
+        
+            if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.rotation = new Quaternion(transform.rotation.x, 90f, transform.rotation.z, 90f);
+            if(Input.GetKey(KeyCode.LeftArrow))
+            {
+                deltaX = 0;
+
+            }
         }
+        
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.rotation = new Quaternion(transform.rotation.x, -90f, transform.rotation.z, 90f);
+            if (Input.GetKey(KeyCode.RightArrow))
+            {
+                deltaX = 0;
+            }
         }
+        
+        
         if (Input.GetKey(KeyCode.LeftShift))
         {
-            movespeed = 10f;
+            movespeed = 7f;
         }
         else
         {
-            movespeed = 2f;
+            movespeed = 3f;
         }
         var newXPos = transform.position.x + deltaX;
         transform.position = new Vector3(newXPos, transform.position.y, transform.position.z);
@@ -75,6 +98,7 @@ public class Player : MonoBehaviour
         if (collision.gameObject.tag == ("Ground") && isGrounded == false)
         {
             isGrounded = true;
+            movespeed = 0;
         }
 
     }

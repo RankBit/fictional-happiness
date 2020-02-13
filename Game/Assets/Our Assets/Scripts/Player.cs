@@ -10,11 +10,15 @@ public class Player : MonoBehaviour
     Rigidbody r;
     float deltaX;
     public bool isGrounded = true;
+
     
 
     //animation
     public Animator anime;
     private float speedPercent;
+    private bool crouch;
+    public int count = 0;
+
 
     public void Start()
     {
@@ -23,6 +27,7 @@ public class Player : MonoBehaviour
     }
     void Update()
     {
+        
         //movement
         if (isGrounded)
         {
@@ -53,7 +58,23 @@ public class Player : MonoBehaviour
             isGrounded = false;
             
         }
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            crouch = true;
+            anime.SetBool("crouch", crouch);
+            count++; 
+
+        }
+        if (count == 2)
+        {
+            crouch = false;
+            anime.SetBool("crouch", crouch);
+            count = 0;
+        }
         
+
+
+
     }
 
     //For Smooth movement
@@ -84,7 +105,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            Debug.Log(transform.rotation.y);
+            
             transform.rotation = new Quaternion(transform.rotation.x, 0, transform.rotation.z, 90f);
             if (Input.GetKey(KeyCode.DownArrow))
             {

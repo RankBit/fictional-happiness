@@ -36,7 +36,7 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
-            Debug.Log(deltaX);
+            
             if (deltaX < 0)
             {
                 r.AddForce(new Vector3(-3 * movespeed / 4, 5, 0), ForceMode.Impulse);
@@ -58,14 +58,15 @@ public class Player : MonoBehaviour
 
     //For Smooth movement
     public void movement()
-    { 
-        
+    {
         deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * movespeed;
-        
-            if (Input.GetKey(KeyCode.RightArrow))
+
+
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             transform.rotation = new Quaternion(transform.rotation.x, 90f, transform.rotation.z, 90f);
-            if(Input.GetKey(KeyCode.LeftArrow))
+            
+            if (Input.GetKey(KeyCode.LeftArrow))
             {
                 deltaX = 0;
 
@@ -75,13 +76,33 @@ public class Player : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.rotation = new Quaternion(transform.rotation.x, -90f, transform.rotation.z, 90f);
+            
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 deltaX = 0;
             }
         }
-        
-        
+        if (Input.GetKey(KeyCode.UpArrow))
+        {
+            Debug.Log(transform.rotation.y);
+            transform.rotation = new Quaternion(transform.rotation.x, 0, transform.rotation.z, 90f);
+            if (Input.GetKey(KeyCode.DownArrow))
+            {
+                deltaX = 0;
+
+            }
+        }
+        if (Input.GetKey(KeyCode.DownArrow))
+        {   
+            transform.rotation = new Quaternion(transform.rotation.x, - 600, transform.rotation.z, 90f);
+            if (Input.GetKey(KeyCode.UpArrow))
+            {
+                deltaX = 0;
+
+            }
+        }
+
+
         if (Input.GetKey(KeyCode.LeftShift))
         {
             movespeed = 7f;

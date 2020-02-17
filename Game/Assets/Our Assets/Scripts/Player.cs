@@ -85,19 +85,19 @@ public class Player : MonoBehaviour
 
         if (Input.GetKey(KeyCode.RightArrow))
         {
-            transform.rotation = new Quaternion(transform.rotation.x, 90f, transform.rotation.z, 90f);
-            
-            if (Input.GetKey(KeyCode.LeftArrow))
+            //transform.rotation = new Quaternion(transform.rotation.x, 90f, transform.rotation.z, 90f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 90, 0), Time.deltaTime * 10f);
+            /*if (Input.GetKey(KeyCode.LeftArrow))
             {
                 deltaX = 0;
 
-            }
+            }*/
         }
         
         if (Input.GetKey(KeyCode.LeftArrow))
         {
-            transform.rotation = new Quaternion(transform.rotation.x, -90f, transform.rotation.z, 90f);
-            
+            //transform.rotation = new Quaternion(transform.rotation.x, -90f, transform.rotation.z, 90f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, -90, 0), Time.deltaTime * 10f);
             if (Input.GetKey(KeyCode.RightArrow))
             {
                 deltaX = 0;
@@ -105,8 +105,9 @@ public class Player : MonoBehaviour
         }
         if (Input.GetKey(KeyCode.UpArrow))
         {
-            
-            transform.rotation = new Quaternion(transform.rotation.x, 0, transform.rotation.z, 90f);
+
+            //transform.rotation = new Quaternion(transform.rotation.x, 0, transform.rotation.z, 90f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 0, 0), Time.deltaTime * 10f);
             if (Input.GetKey(KeyCode.DownArrow))
             {
                 deltaX = 0;
@@ -114,13 +115,20 @@ public class Player : MonoBehaviour
             }
         }
         if (Input.GetKey(KeyCode.DownArrow))
-        {   
-            transform.rotation = new Quaternion(transform.rotation.x, - 600, transform.rotation.z, 90f);
+        {
+            //transform.rotation = new Quaternion(transform.rotation.x, - 600, transform.rotation.z, 90f);
+            transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, -180, 0), Time.deltaTime * 10f);
             if (Input.GetKey(KeyCode.UpArrow))
             {
                 deltaX = 0;
 
             }
+        }
+        if(Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow) )
+        {
+            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, -90, 0), Time.deltaTime * 10f);
+            //transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 90, 0), Time.deltaTime * 10f);
+            
         }
 
 

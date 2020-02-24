@@ -11,10 +11,11 @@ ModelImporter:
     400002: HoldingBar
     400004: Seesaw1
     400006: Seesaw2
-    2100000: Material.004
-    2100002: Material
-    2100004: Material.001
-    2100006: Material.003
+    2100000: No Name
+    2100002: Material.004
+    2100004: Material
+    2100006: Material.001
+    2100008: Material.003
     2300000: HoldingBar
     2300002: Seesaw1
     2300004: Seesaw2
@@ -24,28 +25,8 @@ ModelImporter:
     4300000: HoldingBar
     4300002: Seesaw2
     4300004: Seesaw1
-    9500000: //RootNode
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: c05d18c5b52cba84b9055b7cca77cf94, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 960cf5156f7aa9441ab89cbe1a06de33, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.003
-    second: {fileID: 2100000, guid: 8c43529cd7151034c8e527178efc319d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.004
-    second: {fileID: 2100000, guid: a1310cdc854955c4495c94d3294ee448, type: 2}
+    2186277476908879412: ImportLogs
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -98,7 +79,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -125,7 +106,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

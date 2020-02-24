@@ -60,22 +60,7 @@ ModelImporter:
     4300016: Cylinder.007
     4300018: Cylinder.008
     2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: cb6e11dc83addca4698fc50b455d9b28, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 775196b4039eea840b28a8dc04792c3a, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: f071aecbb1f694c4981cfc38fc6faa6f, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

@@ -210,27 +210,7 @@ ModelImporter:
     4300076: Fence1.022
     4300078: Fence1.023
     2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: 6a59f8b0f7eff9847a5262dc63411631, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 0a728597febf1f745a5a791ca118fab6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.002
-    second: {fileID: 2100000, guid: f3c3ec380cd7b444aa388c2310a61a0c, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.004
-    second: {fileID: 2100000, guid: e82acffff44d30b45ae778a07f090d93, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

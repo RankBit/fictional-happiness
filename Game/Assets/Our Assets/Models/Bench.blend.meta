@@ -25,7 +25,6 @@ ModelImporter:
     100038: Cube.018
     100040: Cube.019
     100042: Frame
-    100044: wood
     400000: //RootNode
     400002: Cube
     400004: Cube.001
@@ -48,10 +47,7 @@ ModelImporter:
     400038: Cube.018
     400040: Cube.019
     400042: Frame
-    400044: wood
     2100000: No Name
-    2100002: Material.001
-    2100004: Material
     2300000: Cube
     2300002: Cube.001
     2300004: Cube.002
@@ -73,7 +69,6 @@ ModelImporter:
     2300036: Cube.018
     2300038: Cube.019
     2300040: Frame
-    2300042: wood
     3300000: Cube
     3300002: Cube.001
     3300004: Cube.002
@@ -95,7 +90,6 @@ ModelImporter:
     3300036: Cube.018
     3300038: Cube.019
     3300040: Frame
-    3300042: wood
     4300000: Frame
     4300002: Cube
     4300004: Cube.001
@@ -117,19 +111,8 @@ ModelImporter:
     4300036: Cube.017
     4300038: Cube.018
     4300040: Cube.019
-    4300042: wood
     2186277476908879412: ImportLogs
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material
-    second: {fileID: 2100000, guid: b2755d5c6fb509c4586a75a65fe42459, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 0aae24f8f950f684cb223ee3b86ff77e, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0

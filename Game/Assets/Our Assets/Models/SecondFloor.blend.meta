@@ -2388,6 +2388,14 @@ ModelImporter:
     104764: Cylinder.006
     104766: Light
     104768: //RootNode
+    104770: Bed
+    104772: Cube.713
+    104774: Cube.715
+    104776: Cylinder.002
+    104778: Door1
+    104780: Door2
+    104782: Door3
+    104784: Shoe Rack
     400000: Camera
     400002: Cube
     400004: Cube.001
@@ -4773,6 +4781,14 @@ ModelImporter:
     404764: Cylinder.006
     404766: Light
     404768: //RootNode
+    404770: Bed
+    404772: Cube.713
+    404774: Cube.715
+    404776: Cylinder.002
+    404778: Door1
+    404780: Door2
+    404782: Door3
+    404784: Shoe Rack
     2000000: Camera
     2100000: No Name
     2100002: Material
@@ -7158,6 +7174,14 @@ ModelImporter:
     2304758: Cylinder.001
     2304760: Cylinder.003
     2304762: Cylinder.006
+    2304764: Bed
+    2304766: Cube.713
+    2304768: Cube.715
+    2304770: Cylinder.002
+    2304772: Door1
+    2304774: Door2
+    2304776: Door3
+    2304778: Shoe Rack
     3300000: Cube
     3300002: Cube.001
     3300004: Cube.002
@@ -9540,6 +9564,14 @@ ModelImporter:
     3304758: Cylinder.001
     3304760: Cylinder.003
     3304762: Cylinder.006
+    3304764: Bed
+    3304766: Cube.713
+    3304768: Cube.715
+    3304770: Cylinder.002
+    3304772: Door1
+    3304774: Door2
+    3304776: Door3
+    3304778: Shoe Rack
     4300000: Cube.008
     4300002: Cube.009
     4300004: Cube.010
@@ -11922,6 +11954,14 @@ ModelImporter:
     4304758: Cube.014
     4304760: Cube.004
     4304762: Cube.016
+    4304764: Shoe Rack
+    4304766: Bed
+    4304768: Door1
+    4304770: Door2
+    4304772: Door3
+    4304774: Cylinder.002
+    4304776: Cube.713
+    4304778: Cube.715
     10800000: Light
   externalObjects: {}
   materials:
